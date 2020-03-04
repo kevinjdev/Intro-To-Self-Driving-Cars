@@ -6,7 +6,7 @@ Clone the repository to your local machine by running the following command in a
 `git clone https://github.com/kevinjdev/Udacity-Intro-Self-Driving-Cars.git`
 
 ## Histogram Filter in Python2
-For this project I implemented the 2D **sense** function in *localize.py* to update a robot's belief in it's current position to perform localization. I also used pdb to debug the **move** function and fixed a bug due in move due to incorrect array indexing.
+For this project I implemented the 2D **sense** function in *localize.py* to update a robot's belief in it's current position to perform localization. I also used pdb to debug the **move** function, fixing a bug due  to incorrect array indexing.
 
 ### Prerequisites
 * Jupyter Notebook installed
