@@ -15,8 +15,38 @@ For this project I implemented the 2D **sense** function in *localize.py* to upd
 conda install nb_conda_kernels
 conda create -n py27 python=2.7 ipykernel
 ```
+### How To Run
+Start Jupyter, then open the notebook file **writeup.ipynb** located in the **Histogram Filter in Python2** folder
+
+## Implement a Matrix Class
+
+For this project I implemented the following functions in *matrix.py*
+```
+class Matrix:
+  def determinant(self):
+      # your code
+
+  def trace(self):
+      # your code
+
+  def inverse(self):
+      # your code
+
+  def transpose(self):
+     # your code
+
+  # Overloaded operators
+
+  def __add__(self,other):
+    # your code
+
+  def __sub__(self,other):
+    # your code
+
+  def __mul__(self,other):
+    # your code
+```
+The **matrix_playground.ipynb** notebook tests the *matrix.py* class. the **kalman_filter_demo.ipynb** has a demo of an implemented kalman filter that works once the *matrix.py* class is implemented correctly.
 
 ### How To Run
-Start Jupyter, then open the notebook file **writeup.ipynb** located in the **Histogram Filter in Python2** folder`
-
-
+Start Jupyter, then open the notebook file **matrix_playground.ipynb** located in the **Implement a Matrix Class** folder. This is a python 3 project.
