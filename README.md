@@ -5,12 +5,15 @@ Clone the repository to your local machine by running the following command in a
 
 `git clone https://github.com/kevinjdev/Udacity-Intro-Self-Driving-Cars.git`
 
+## Prerequisites
+* For the Python projects, Jupyter Notebook should be installed
+* For the C++ projects, a gcc compiler should be installed.
+
 ## Histogram Filter in Python2
 I implemented the 2D **sense** function in *localize.py* to update a robot's belief in its current position to perform localization. I also used pdb to debug the **move** function, fixing a bug due  to incorrect array indexing.
 
-### Prerequisites
-* Jupyter Notebook installed
-* Python 2 environment active. Using Anaconda, I ran the following 2 commands in terminal to set up a python2 environment in Jupyter. All python notebooks are implmented with Python 3.
+### Known Issue
+* To run **Histogram Filter in Python2**, a Python 2 environment needs to be active. Python 2 is no longer supported as of April 2020, so I will attempt to modify this project for Python 3. Using Anaconda, I ran the following 2 commands in terminal to set up a Python 2 environment in Jupyter. All other Python projects use Python 3. 
 ```
 conda install nb_conda_kernels
 conda create -n py27 python=2.7 ipykernel
@@ -101,6 +104,14 @@ I integrated accelerometer(acceleration) data to obtain speeds, and integrated g
 
 ### How to Run
 Start Jupyter, then in the folder **Reconstructing Trajectories from Sensor Data** open the notebook **Reconstructing Trajectories.ipynb**. Each section of code can be run by pressing *ctrl+enter*.
+
+### Known Issue
+There are some deprecation issues with plotly and so the graphs don't display correctly. I updated the plotly import in helpers.py to be `import chart_studio.plotly as py`. There are a few other issues related to this I still need to fix.
+
+To install plotly and chart studio:
+
+`conda install -c plotly plotly=4.5.2`
+`conda install -c plotly chart-studio=1.0.0`
 
 ## Traffic Light Classifier
 I built a image classifer that performs the classifies a traffic light image as being a red, yellow, or green light. The recipe for classifying the images is below.
