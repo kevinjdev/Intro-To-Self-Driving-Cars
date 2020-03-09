@@ -111,6 +111,31 @@ I built a image classifer that performs the classifies a traffic light image as 
 - Evaluate the model.
 
 I achieved accuracy of 0.9730639730639731 with the brightness feature extraction that I implemented.
+```
+def brightness_feature(rgb_image):
+
+    # Convert image to HSV color space
+    hsv_image = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2HSV)
+    
+    # Create a mask for red, yellow, and green
+    [maskR, maskY, maskG] = create_masks(hsv_image)
+    
+    # Apply each mask individually to image before determining brightness
+    hsv_mask_imgR = cv2.bitwise_and(rgb_image, rgb_image, mask=maskR)
+    hsv_mask_imgG = cv2.bitwise_and(rgb_image, rgb_image, mask=maskG)
+    hsv_mask_imgY = cv2.bitwise_and(rgb_image, rgb_image, mask=maskY)
+    
+    # Calculate brightness using each mask and summing over the 1/3 of image corresponding
+    # to location where respective color should appear.
+    brightness = {}
+    brightness["yellow"] = np.sum(hsv_mask_imgY[11:21, :, 2]) # sum over middle 1/3
+    brightness["red"] = np.sum(hsv_mask_imgR[:11,:,2]) # sum over top 1/3
+    brightness["green"] = np.sum(hsv_mask_imgG[21:,:,2]) #sum over bottom 1/3
+    
+    # Returns the label with the max brightness. If all 3 brightness values are zero (mask filtered out all colors) 
+    # then yellow will be returned.
+    return max(brightness, key = lambda k: brightness[k])
+```
 
 ### How to Run
 
