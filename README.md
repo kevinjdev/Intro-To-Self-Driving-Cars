@@ -111,6 +111,7 @@ There are some deprecation issues with plotly and so the graphs don't display co
 To install plotly and chart studio:
 
 `conda install -c plotly plotly=4.5.2`
+
 `conda install -c plotly chart-studio=1.0.0`
 
 ## Traffic Light Classifier
@@ -147,6 +148,12 @@ def brightness_feature(rgb_image):
     # then yellow will be returned.
     return max(brightness, key = lambda k: brightness[k])
 ```
+### Known Issue
+OpenCV must be installed to run 
+
+To install using conda:
+
+`conda install opencv`
 
 ### How to Run
 
