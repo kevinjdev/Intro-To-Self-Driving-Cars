@@ -9,17 +9,19 @@ Clone the repository to your local machine by running the following command in a
 * For the Python projects, Jupyter Notebook should be installed
 * For the C++ projects, a gcc compiler should be installed.
 
-## Histogram Filter in Python2
+## Histogram Filter in Python2 && Histogram Filter in Python3
 I implemented the 2D **sense** function in *localize.py* to update a robot's belief in its current position to perform localization. I also used pdb to debug the **move** function, fixing a bug due  to incorrect array indexing.
 
 ### Known Issue
-* To run **Histogram Filter in Python2**, a Python 2 environment needs to be active. Python 2 is no longer supported as of April 2020, so I will attempt to modify this project for Python 3. Using Anaconda, I ran the following 2 commands in terminal to set up a Python 2 environment in Jupyter. All other Python projects use Python 3. 
+* To run **Histogram Filter in Python2**, a Python 2 environment needs to be active. Python 2 is no longer supported as of April 2020, so I have modified this project for Python 3 under the title **Histogram Filter in Python3**. Using Anaconda, I ran the following 2 commands in terminal to set up a Python 2 environment in Jupyter. All other Python projects use Python 3. 
 ```
 conda install nb_conda_kernels
 conda create -n py27 python=2.7 ipykernel
 ```
 ### How To Run
 Start Jupyter, then open the notebook file **writeup.ipynb** located in the **Histogram Filter in Python2** folder. Each section of code can be run by pressing *ctrl+enter*.
+
+The same instructions apply to run the project **Histogram Filter in Python3**. Choose the Python3 kernel in Jupyter notebook if not already selected.
 
 ## Implement a Matrix Class
 I implemented the following functions in *matrix.py*
