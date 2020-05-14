@@ -13,7 +13,10 @@ Clone the repository to your local machine by running the following command in a
 I implemented the 2D **sense** function in *localize.py* to update a robot's belief in its current position to perform localization. I also used pdb to debug the **move** function, fixing a bug due  to incorrect array indexing.
 
 ### Known Issue
-* To run **Histogram Filter in Python2**, a Python 2 environment needs to be active. Python 2 is no longer supported as of April 2020, so I have modified this project for Python 3 under the title **Histogram Filter in Python3**. Using Anaconda, I ran the following 2 commands in terminal to set up a Python 2 environment in Jupyter. All other Python projects use Python 3. 
+* To run **Histogram Filter in Python2**, a Python 2 environment needs to be active. Python 2 is no longer supported as of April 2020, so I have modified this project for Python 3 under the title **Histogram Filter in Python3**. Using Anaconda, I ran the following 2 commands in terminal to set up a Python 2 environment in Jupyter. All other Python projects use Python 3.
+
+Updating from python2 to 3 involved changing division to floor division using // to obtain cell indexes, changing the print method signature, and importing reload. I also removed the "from_future" reference since no longer needed.
+
 ```
 conda install nb_conda_kernels
 conda create -n py27 python=2.7 ipykernel
